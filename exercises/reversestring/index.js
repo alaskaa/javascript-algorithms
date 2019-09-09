@@ -26,9 +26,7 @@
 //}
 
 function reverse(str) {
-  return str.split("").reduce((reversed, character) => {
-    return character + reversed;
-  }, '');
+  return str.split("").reduce((reversed, character) => character + reversed, '');
   // reduce array into a singular value
 }
 
