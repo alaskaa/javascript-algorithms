@@ -10,12 +10,19 @@
 //  return str.split("").reverse().join("");
 //}
 
+//function reverse(str) {
+//  const reversed = [];
+//  str.split("").forEach(char => reversed.unshift(char));
+//  return reversed.join("");
+//}
+
 function reverse(str) {
-  const reversed = [];
-
-  str.split("").forEach(char => reversed.unshift(char));
-
-  return reversed.join("");
+  let reversed = '';
+  
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+  return reversed;
 }
 
 module.exports = reverse;
