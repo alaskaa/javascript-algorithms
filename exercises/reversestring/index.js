@@ -16,13 +16,20 @@
 //  return reversed.join("");
 //}
 
+//function reverse(str) {
+//  let reversed = '';
+//  
+//  for (let character of str) {
+//    reversed = character + reversed;
+//  }
+//  return reversed;
+//}
+
 function reverse(str) {
-  let reversed = '';
-  
-  for (let character of str) {
-    reversed = character + reversed;
-  }
-  return reversed;
+  return str.split("").reduce((reversed, character) => {
+    return character + reversed;
+  }, '');
+  // reduce array into a singular value
 }
 
 module.exports = reverse;
